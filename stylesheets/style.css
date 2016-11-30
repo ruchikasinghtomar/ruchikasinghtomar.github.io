@@ -1,36 +1,18 @@
-/*!
- * Start Bootstrap - 4 Col Portfolio (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
-body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-}
-
-.portfolio-item {
-    margin-bottom: 25px;
-}
-
-footer {
-    margin: 50px 0;
-}
-
-/* Shutter Out Horizontal */
-.hvr-shutter-out-horizontal {
+/* Shutter In Horizontal */
+.hvr-shutter-in-horizontal {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
-  background: #e1e1e1;
+  background: #2098D1;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-.hvr-shutter-out-horizontal:before {
+.hvr-shutter-in-horizontal:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -38,9 +20,9 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #2098D1;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+  background: #e1e1e1;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
   -webkit-transform-origin: 50%;
   transform-origin: 50%;
   -webkit-transition-property: transform;
@@ -50,8 +32,10 @@ footer {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.hvr-shutter-out-horizontal:hover,
-.hvr-shutter-out-horizontal:focus,
-.hvr-shutter-out-horizontal:active {
-    transform: scale(1.1);
+.hvr-shutter-in-horizontal:hover, .hvr-shutter-in-horizontal:focus, .hvr-shutter-in-horizontal:active {
+  color: white;
+}
+.hvr-shutter-in-horizontal:hover:before, .hvr-shutter-in-horizontal:focus:before, .hvr-shutter-in-horizontal:active:before {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
 }
